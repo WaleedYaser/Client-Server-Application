@@ -16,10 +16,18 @@ public class serverProgram {
             OutputStream os = someSocket.getOutputStream();
             DataOutputStream out = new DataOutputStream(os);
             
-            System.out.println("Client says: " + in.readInt());
-            out.writeUTF("Hello from server");
-			
-            someSocket.close();
+            while (true)
+            {
+                int number = in.readInt();
+                System.out.println("Processing " + number + " ... ");
+                out.writeInt(Square(number));
+            }	
+            //someSocket.close();
 	}
-
+        
+        public static int Square(int number)
+        {
+            // return square of the number
+            return number * number;
+        }
 }
