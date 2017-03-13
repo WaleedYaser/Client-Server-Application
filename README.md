@@ -10,7 +10,7 @@ This type of applications is commonly used in Distributed Systems.
 1. A client program called _Client.java_ and a server program called _Server.java_
 2. The _server program_ continuously check if there are any client requests, and
 handles them.
-3. The client program’s main method takes two arguments 
+3. The client program’s main method takes two arguments
 _(destination server IP/hostname and destination server port)_ and these arguments
 must are not statically wired in the program itself. The client’s program uses those
 arguments later to connect to the server.
